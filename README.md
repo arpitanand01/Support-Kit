@@ -1,10 +1,10 @@
 ![image](https://github.com/user-attachments/assets/96dd11b2-7b17-4d02-a943-6f9f3f93c1df)
 
-#include<LiquidCrystal.h>
+#include<LiquidCrystal.h><br/>
 
-const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
-LiquidCrystal lcd1(rs, en, d4, d5, d6, d7); 
-float celsius;
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;<br/>
+LiquidCrystal lcd1(rs, en, d4, d5, d6, d7); <br/>
+float celsius;<br/>
 int temp = A1;
 int sensorReading = 0;
 // alarm
