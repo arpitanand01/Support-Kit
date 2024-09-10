@@ -5,43 +5,43 @@
 const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;<br/>
 LiquidCrystal lcd1(rs, en, d4, d5, d6, d7); <br/>
 float celsius;<br/>
-int temp = A1;
-int sensorReading = 0;
+int temp = A1;<br/>
+int sensorReading = 0;<br/>
 // alarm
-int h=0,m=0,s=0;
-int alarmH = 0, alarmMin = 1, alarmSec = 1;
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
-const int buzzer = 10;
+int h=0,m=0,s=0;<br/>
+int alarmH = 0, alarmMin = 1, alarmSec = 1;<br/>
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);<br/>
+const int buzzer = 10;<br/>
 
 //code for button and buzzer
-int buttonPin = 7; //inform ide button pada pin 2
-int buzPin = 8; //inform ide buzzer pada pin 8
-int buttonState = 0;
+int buttonPin = 7; //inform ide button pada pin 2<br/>
+int buzPin = 8; //inform ide buzzer pada pin 8<br/>
+int buttonState = 0;<br/>
 
 
-void setup(){
-pinMode(temp,INPUT);
+void setup(){<br/>
+pinMode(temp,INPUT);<br/>
 // for flex sensor and buzzer
-pinMode(A0, INPUT);
-Serial.begin(9600);
-pinMode(9, OUTPUT);
+pinMode(A0, INPUT);<br/>
+Serial.begin(9600);<br/>
+pinMode(9, OUTPUT);<br/>
 //button and buzzer
-pinMode(buzPin , OUTPUT); // buzzer pin 8 OUTPUT
-pinMode (buttonPin , INPUT); // Button pin 7 INPUT
+pinMode(buzPin , OUTPUT);<br/> // buzzer pin 8 OUTPUT
+pinMode (buttonPin , INPUT);<br/> // Button pin 7 INPUT
 //alarm
-lcd.begin(16, 2);
-pinMode(buzzer, OUTPUT);
-}
+lcd.begin(16, 2);<br/>
+pinMode(buzzer, OUTPUT);<br/>
+}<br/>
 
 
-void loop(){
-celsius = analogRead(temp)*0.004882814;
-celsius = (celsius - 0.5) * 100.0;
-lcd.setCursor(0,1);
-lcd.print("Temp: ");
-lcd.print(celsius);
-lcd.print(" C");
-delay(1000);
+void loop(){<br/>
+celsius = analogRead(temp)*0.004882814;<br/>
+celsius = (celsius - 0.5) * 100.0;<br/>
+lcd.setCursor(0,1);<br/>
+lcd.print("Temp: ");<br/>
+lcd.print(celsius);<br/>
+lcd.print(" C");<br/>
+delay(1000);<br/>
 lcd.clear();
 // read the sensor for flex sensor
 sensorReading = analogRead(A0);
