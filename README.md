@@ -1,4 +1,6 @@
-![image](https://github.com/user-attachments/assets/96dd11b2-7b17-4d02-a943-6f9f3f93c1df)
+![image](https://github.com/user-attachments/assets/96dd11b2-7b17-4d02-a943-6f9f3f93c1df)<br/>
+
+
 
 #include<LiquidCrystal.h><br/>
 
